@@ -1,10 +1,18 @@
 {
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  // "plugins": ["@typescript-eslint"],
+  "plugins": ["react"],
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "standard-with-typescript",
+    "plugin:react/recommended"
+    // "eslint:recommended",
+    // "plugin:@typescript-eslint/eslint-recommended",
+    // "plugin:@typescript-eslint/recommended"
   ],
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
@@ -12,8 +20,10 @@
   "rules": {
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/camelcase": "off",
-    "no-redeclare": "off",
-    "import/export": "off"
+    // "@typescript-eslint/camelcase": "off",
+    // "no-redeclare": "off",
+    // "import/export": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "errors"
   }
 }
